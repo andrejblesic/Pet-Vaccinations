@@ -1,0 +1,104 @@
+body {
+  color: white;
+  background: #6ec9b2;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.add-vaccine-icon:hover {
+  transform: scaleX(1.1) scaleY(1.1);
+  cursor: pointer;
+}
+
+#date-input {
+  width: 135px;
+  margin-left: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 4px 4px 4px inset;
+  padding-left: 10px;
+  height: 30px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+.invalid-date {
+  background: pink;
+}
+
+h1 {
+  margin: 0;
+}
+
+.clickable:hover {
+  cursor: pointer;
+}
+
+.logout:hover {
+  background: #f06240;
+}
+
+.username:hover {
+  background: #136240;
+}
+
+.submitbut:hover {
+  cursor: pointer;
+}
+
+.addVaccine:hover {
+  cursor: pointer;
+}
+
+.ikonica:hover {
+  cursor: pointer;
+}
+
+.color-legend:hover {
+  cursor: pointer !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .vaccine-add-options {
+    flex-direction: column !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  ul {
+    width: 90% !important;
+    position: relative;
+    right: 2.5%;
+  }
+  .vaccine-options {
+    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  #vaccine-add-info {
+    display: none !important;
+  }
+  .vaccine-options > div {
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+  }
+  #pet-name-input {
+    margin: 5px !important;
+  }
+  #vaccine-form {
+    flex-direction: column;
+    width: 69%;
+  }
+  #plus-div {
+    width: 31%;
+  }
+  #vaccine-month-input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}

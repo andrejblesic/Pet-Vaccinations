@@ -1,0 +1,50 @@
+.list-item:hover {
+  cursor: pointer;
+  transform: scaleX(1.008) scaleY(1.008);
+}
+
+.prosireno {
+  max-height: 220px;
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.suzeno {
+  max-height: 0;
+  transform: scaleY(0);
+  opacity: 0;
+}
+
+.expanded {
+  transition: opacity 200ms, transform 200ms, max-height 150ms;
+  transition-timing-function: ease-out;
+  will-change: transform;
+}
+
+.shown {
+  max-height: 70px;
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+.hidden {
+  max-height: 0;
+  transform: scaleY(0);
+  opacity: 0;
+}
+
+.vaccine-edit {
+  transition: transform 100ms, max-height 50ms;
+}
+
+.ikonica:hover {
+  transform: scaleY(1.08) scaleX(1.08);
+}
+
+.submitbut {
+  background: #ff6347;
+}
+
+.submitbut:hover {
+  background: #f02317;
+}

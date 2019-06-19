@@ -1,0 +1,39 @@
+{
+  "name": "pet-vaccination",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "firebase": "^5.8.5",
+    "firebaseui": "^3.4.1",
+    "generator-react-firebase": "^2.3.1",
+    "jquery": "^3.3.1",
+    "jquery-datepicker": "^1.12.3",
+    "npm": "^6.4.1",
+    "react": "^16.5.2",
+    "react-datepicker": "^2.1.0",
+    "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.4",
+    "redux": "^4.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "redux-devtools": "^3.4.1"
+  }
+}

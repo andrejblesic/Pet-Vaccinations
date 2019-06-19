@@ -1,0 +1,11 @@
+.slidein {
+  left: 0px;
+}
+
+.slideout {
+  left: -240px;
+}
+
+.color-legend {
+  transition: left 500ms;
+}
