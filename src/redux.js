@@ -12,7 +12,7 @@ const reducer = (state = {}, action) => {
   }
 };
 
-const databasesync = data => {
+const databaseSync = data => {
   return {
     type: DATASYNC,
     data: data
@@ -21,5 +21,5 @@ const databasesync = data => {
 
 const store = createStore(reducer);
 
-export { databasesync };
+export { databaseSync };
 export default store;

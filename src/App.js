@@ -22,7 +22,7 @@ class App extends Component {
     this.addVaccine = this.addVaccine.bind(this);
   }
   componentDidMount() {
-    firebase.auth().onAuthStateChanged(user => {
+    firebase.auth().onAuthStateChanged(user => { //set user id after authentication and fetch user info
       if (user && !this.state.signedIn) {
         let currentRef = firebase.database().ref("users/" + user.uid);
         firebase
@@ -50,7 +50,7 @@ class App extends Component {
       });
     }
     if (this.state.signedIn === true && window.location.pathname === "/") {
-      window.location.href = "/home";
+      window.location.href = "/home"; //redirect to /home after login
     }
   }
   signOut() {
@@ -67,7 +67,7 @@ class App extends Component {
           () => {
             window.location.href = "/";
             ui.start("#firebaseui-auth-container", uiConfig);
-            this.props.databasesync({});
+            this.props.databaseSync({});
           }
         );
       });
@@ -86,7 +86,7 @@ class App extends Component {
     let milliseconds = currDate.getTime();
     let currentRef = firebase
       .database()
-      .ref(`users/${this.state.userID}/vakcine/${milliseconds}`);
+      .ref(`users/${this.state.userID}/vakcine/${milliseconds}`); //set firebase reference to current user and add new vaccine to database
     currentRef.set({
       dueDate: vacDate.getTime(),
       vaccineName: vaccineName,
@@ -107,9 +107,9 @@ class App extends Component {
         userid: user.uid
       });
     }
-    currentRef.on("value", snapshot => {
+    currentRef.on("value", snapshot => { //create firebase listener that detects data changes in database and calls databaseSync function that updates Redux state
       let currentUserState = snapshot.val();
-      this.props.databasesync(currentUserState);
+      this.props.databaseSync(currentUserState);
     });
     this.setState({
       signedIn: true,

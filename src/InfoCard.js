@@ -5,6 +5,7 @@ import pencil from "./images/pencil.svg";
 import question from "./images/question.svg";
 import React from "react";
 
+//side card containing information about vaccine color codes and icons
 export const InfoCard = ({ showInfo, changeInfo }) => {
   let infoDivStyle = {
     display: "flex",

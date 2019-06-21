@@ -123,7 +123,7 @@ export default class Vaccine extends Component {
       background: this.state.invalidVacName ? "pink" : "white"
     };
     let listItemStyle = {
-      background:
+      background: //change background color of card according to vaccine state (upcoming, overdue, done)
         this.props.info.done &&
         !this.props.info.oneTime &&
         !upcoming &&
@@ -144,7 +144,7 @@ export default class Vaccine extends Component {
     let expandedStyle = {
       padding: this.state.expanded ? "4px" : "0px",
       marginBottom: this.state.expanded ? "10px" : "0px",
-      background:
+      background: //change background color of expanded info on card according to vaccine state (upcoming, overdue, done)
         this.props.info.done &&
         !this.props.info.oneTime &&
         !upcoming &&

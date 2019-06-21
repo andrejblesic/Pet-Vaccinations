@@ -1,6 +1,7 @@
 import firebase from "firebase/app";
 import firebaseui from "firebaseui";
 
+//create firebase initialization object
 const config = {
   apiKey: "AIzaSyCn3vjH1LTwp4U5zpgT_T0wZojIf3GV-iI",
   authDomain: "pet-vaccinations.firebaseapp.com",

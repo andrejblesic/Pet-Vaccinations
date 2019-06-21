@@ -79,7 +79,7 @@ class Home extends Component {
       vaccineFrequency: e.target.value
     });
   }
-  sendVaccine(e) {
+  sendVaccine(e) { //send new vaccine info to database
     e.preventDefault();
     if (
       this.state.currentVaccine.length > 0 &&
@@ -155,7 +155,7 @@ class Home extends Component {
       });
     }
   }
-  showHideForm() {
+  showHideForm() { //show and hide new vaccine form
     this.setState({
       form: !this.state.form,
       currentVaccine: "",

@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { databasesync } from "./redux";
+import { databaseSync } from "./redux";
 import App from "./App";
 import VaccineList from "./VaccineList";
 
@@ -15,7 +15,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    databasesync: data => dispatch(databasesync(data))
+    databaseSync: data => dispatch(databaseSync(data))
   };
 };
 

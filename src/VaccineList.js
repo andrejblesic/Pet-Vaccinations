@@ -76,7 +76,7 @@ class VaccineList extends Component {
         );
       });
       let date = new Date().getTime();
-      switch (this.props.show) {
+      switch (this.props.show) { //determine which vaccines to display in the list according to option chosen in drop down list
         case "Done":
           vaccineList = vaccineList.filter(item => {
             return (
@@ -101,7 +101,7 @@ class VaccineList extends Component {
         default:
           break;
       }
-      switch (this.props.sortby) {
+      switch (this.props.sortby) { //determine the sorting of the vaccines according to option chosen in drop down list
         case "Date added":
           vaccineList.sort((a, b) => {
             return a.props.info.dateAdded - b.props.info.dateAdded;
