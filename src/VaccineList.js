@@ -18,7 +18,7 @@ class VaccineList extends Component {
     this.handleEdit = this.handleEdit.bind(this);
   }
   componentWillReceiveProps(nextProps) {
-    if (nextProps.vakcine === 0) {
+    if (!nextProps.vakcine) {
       this.setState({
         emptyList: true
       });

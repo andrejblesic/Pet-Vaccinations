@@ -4,7 +4,7 @@ import App from "./App";
 import VaccineList from "./VaccineList";
 
 const mapStateToProps = state => {
-  if (state !== undefined) {
+  if (state) {
     return {
       vakcine: state.vakcine ? state.vakcine : 0,
       userid: state.userid
