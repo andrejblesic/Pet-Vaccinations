@@ -12,13 +12,13 @@ class VaccineList extends Component {
     this.state = {
       expanded: false,
       editExpanded: false,
-      emptyList: null
+      emptyList: true
     };
     this.handleRemove = this.handleRemove.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
   }
   componentWillReceiveProps(nextProps) {
-    if (!nextProps.vakcine) {
+    if (nextProps.vakcine === 0) {
       this.setState({
         emptyList: true
       });

@@ -109,7 +109,6 @@ class App extends Component {
     }
     currentRef.on("value", snapshot => { //create firebase listener that detects data changes in database and calls databaseSync function that updates Redux state
       let currentUserState = snapshot.val();
-      console.log(currentUserState)
       this.props.databaseSync(currentUserState);
     });
     this.setState({

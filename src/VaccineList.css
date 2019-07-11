@@ -16,7 +16,7 @@
 }
 
 .expanded {
-  transition: opacity 200ms, transform 200ms, max-height 150ms;
+  transition: opacity 200ms, transform 50ms, max-height 150ms;
   transition-timing-function: ease-out;
   will-change: transform;
 }
