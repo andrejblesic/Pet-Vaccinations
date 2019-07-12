@@ -10,6 +10,7 @@ class VaccineList extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      loading: true,
       expanded: false,
       editExpanded: false,
       emptyList: true
@@ -20,11 +21,13 @@ class VaccineList extends Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.vakcine === 0) {
       this.setState({
-        emptyList: true
+        emptyList: true,
+        loading: false
       });
     } else {
       this.setState({
-        emptyList: false
+        emptyList: false,
+        loading: false
       });
     }
   }
@@ -129,14 +132,15 @@ class VaccineList extends Component {
       }
     }
     let Loading = <h1 style={loadStyle}>Loading...</h1>;
+    console.log(this.state.loading)
     return (
       <div style={listStyle}>
         <ul
           style={{ minWidth: "300px", width: "55%", margin: "0", padding: "0" }}
         >
           <div>
-            {this.state.emptyList === null ? Loading : vaccineList}
-            {this.state.emptyList && this.props.show === "All" ? (
+            {this.state.loading ? Loading : vaccineList}
+            {!this.state.loading && this.state.emptyList && this.props.show === "All" ? (
               <h2 className="list-info" style={{ textAlign: "center" }}>
                 There are currently no vaccines in your library. Add them using
                 the&nbsp;
