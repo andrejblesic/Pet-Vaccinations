@@ -19,7 +19,7 @@ class Home extends Component {
       vaccineFrequency: "",
       invalidFrequency: false,
       form: false,
-      sortby: "Date added",
+      sortby: "Due date",
       show: "All",
       dueDate: null,
       invalidDueDate: false,
@@ -309,8 +309,8 @@ class Home extends Component {
                 Sort by:
               </h3>
               <select onChange={this.handleSort} style={styles.selectStyle}>
-                <option>Date added</option>
                 <option>Due date</option>
+                <option>Date added</option>
                 <option>Date done</option>
                 <option>Pet name</option>
               </select>

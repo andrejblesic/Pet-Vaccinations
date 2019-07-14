@@ -18,6 +18,9 @@ class VaccineList extends Component {
     this.handleRemove = this.handleRemove.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
   }
+  componentDidMount() {
+    console.log(this.props.sortby)
+  }
   componentWillReceiveProps(nextProps) {
     if (nextProps.vakcine === 0) {
       this.setState({
@@ -132,7 +135,6 @@ class VaccineList extends Component {
       }
     }
     let Loading = <h1 style={loadStyle}>Loading...</h1>;
-    console.log(this.state.loading)
     return (
       <div style={listStyle}>
         <ul
